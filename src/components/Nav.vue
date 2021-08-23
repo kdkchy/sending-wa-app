@@ -23,11 +23,11 @@
             <a href="#" class="navbar-brand d-flex align-items-center">
               <font-awesome-icon :icon="['fab', 'whatsapp']" />
               <div class="" style="margin-left:5px;">
-                <strong>Kirim WA</strong>
+                <strong><router-link to="/" class="" style="text-decoration: none; color: inherit;">Kirim WA</router-link></strong>
               </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-              <font-awesome-icon :icon="['fas', 'circle']" />
+              <font-awesome-icon :icon="['fas', 'dot-circle']" />
             </button>
           </div>
         </div>

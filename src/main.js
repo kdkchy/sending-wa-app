@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
+import moshaToast from 'mosha-vue-toastify'
+import 'mosha-vue-toastify/dist/style.css'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
 
@@ -17,4 +20,5 @@ library.add(fab)
 createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
     .component('navigation', require('./components/Nav.vue').default)
+    .use(moshaToast)
     .use(router).mount('#app')
