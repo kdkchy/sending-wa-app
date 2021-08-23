@@ -46,10 +46,10 @@ export default {
           console.log('inputnya benerin napa')
         } else if (this.nomorWA.charAt(0) == '0'){
           this.executedWA = '62'+this.nomorWA.slice(1)
-          window.open('https://web.whatsapp.com/send?phone='+this.executedWA)
+          window.open('https://api.whatsapp.com/send?phone='+this.executedWA)
         } else {
           this.executedWA = this.nomorWA
-          window.open('https://web.whatsapp.com/send?phone='+this.executedWA)
+          window.open('https://api.whatsapp.com/send?phone='+this.executedWA)
         }
       }
   },
