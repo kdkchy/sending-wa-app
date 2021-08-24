@@ -1,9 +1,7 @@
 <template>
 <body>
-    <div class="p-3 bg-secondary progress-bar-striped" style="min-height: 10px;">
-    </div>
-
-  
+  <div class="p-3 bg-secondary progress-bar-striped" style="min-height: 10px;">
+  </div>
   <div class="jumbotron">
     <section class="py-5 text-center border-bottom">
         <div class="row py-lg-5">
@@ -15,7 +13,7 @@
               <div class="px-2">
                   <form action="" class="justify-content-center" id="chatForm">
                       <div class="form-group mb-3">
-                          <input type="text" class="form-control border-0 shadow text-center" name="nomor-wa" placeholder="+628... / 62... / 08..." v-model="nomorWA">
+                          <input type="text" class="form-control border-0 shadow-sm text-center" name="nomor-wa" placeholder="+628... / 62... / 08..." v-model="nomorWA">
                       </div>
                       <div class="btn-group">
                         <button type="submit" class="btn btn-outline-dark rounded-pill shadow m-2" @click.prevent="startChat()">CHAT!</button>
@@ -25,25 +23,22 @@
               </div>
           </div>
         </div>
-        <div v-if="this.generatedLink" class="text-center">
+        <div v-if="this.generatedLink" class="text-center mt-4">
           <p class="fst-italic">Generated Link</p> 
-          <p>{{this.generatedLink}} </p>
+          <p id="generatedLink">{{this.generatedLink}} </p>
           <div class="btn-group">
-            <button class="btn btn-light m-2" @click.prevent="copyClipBoard()"><font-awesome-icon :icon="['fas', 'copy']" /></button>
+            <button class="btn btn-light m-2" @click.prevent="copyClipBoard()" data-clipboard-target="#generatedLink"><font-awesome-icon :icon="['fas', 'copy']" /></button>
             <button class="btn btn-light m-2" @click.prevent="share()"><font-awesome-icon :icon="['fas', 'location-arrow']" /></button>
           </div>
-          
         </div>
     </section>
-
-    
-
   </div>
 </body>
-
 </template>
 
 <script>
+// import ClipboardJS from 'clipboard/dist/clipboard.min.js'
+// new ClipboardJS('.btn');
 export default {
   
   created () {
@@ -60,12 +55,7 @@ export default {
 
   },
   methods: {
-      toast() {
-         
-      },
-      
       startChat(){
-
         if(this.nomorWA.length == 0){
             this.$moshaToast(
              { title: 'Apaan gaada nomor!', description: 'Masukinnya yang bener'},

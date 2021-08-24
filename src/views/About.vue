@@ -18,6 +18,9 @@
             <p class="lead text-muted">
               That's it. Mau aplikasi ini mempermudah pekerjaan mu lagi? Email atau DM ya!
             </p>
+            <p class="lead text-muted">
+              Jangan lupa instal Whatsapp di smartphone-mu, ya!
+            </p>
           </div>
         </div>
     </section>
